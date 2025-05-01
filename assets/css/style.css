@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Marcellus&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+body {
+  margin: 0;
+  background-color: #222;
+  color: #bcbcbc;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+main {
+  margin-top: -100px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*header*/
+
+header {
+  height: 22%;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to top, #222222, transparent);
+}
+
+.header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header button {
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/*section-perfil*/
+
+.section-perfil .image {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  background-color: rgb(58, 58, 58);
+  border: 3px solid #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.section-perfil .image img {
+  border-radius: 100px;
+  width: 150px;
+  height: 150px;
+}
+
+.section-perfil .name {
+  font-family: "Marcellus", serif;
+  font-size: 19px;
+  margin: 40px 0;
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/*section-dados*/
+
+.section-dados {
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.section-dados .dados {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  max-width: 390px;
+  background-color: #2a2a2a;
+  padding: 15px 20px;
+  border-radius: 15px;
+}
+
+.section-dados .dados-bancarios,
+.section-dados .chave-pix {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.section-dados .dados h2 {
+  margin: 0;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.section-dados .dados p {
+  margin: 0;
+}
+
+.section-dados #copy {
+  background-color: transparent;
+  color: #bcbcbc;
+  border: 0;
+  font-size: 23px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.section-dados #copy:hover {
+  color: #fff;
+}
+
+.toast {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  color: rgb(100, 100, 100);
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  text-align: center;
+  max-width: 80%;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/*section-qrcode*/
+
+.section-qrcode {
+  margin-bottom: 30px;
+}
+
+.section-qrcode .nome--conta-bancaria h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 19px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.section-qrcode .botao-qr {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.section-qrcode .qrcode img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+/* Estilo do modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Fundo escurecido */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  width: 80%;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 300px;
+  position: relative;
+}
+
+.modal .botao-download {
+  background-color: transparent;
+  border: 0;
+  bottom: 10px;
+  color: #ffffff;
+}
+
+.modal .botao-download,
+.modal .fechar {
+  position: absolute;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal .fechar {
+  top: 10px;
+  color: #666;
+}
+
+.modal h2 {
+  font-family: "DM Sans", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.botao-qr {
+  cursor: pointer;
+}
+
+.modal img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.modal p {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Area de Responsividade*/
+
+@media (max-height: 870px) {
+  .section-perfil .image {
+    width: 130px;
+    height: 130px;
+  }
+
+  .section-perfil .image img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .section-perfil .name {
+    font-size: 17px;
+    margin: 33px 0;
+  }
+
+  .section-dados .dados h2 {
+    font-size: 15px;
+  }
+
+  .section-dados .dados p {
+    font-size: 12px;
+  }
+
+  .section-qrcode .nome--conta-bancaria h2 {
+    margin: 10px;
+    font-size: 15px;
+  }
+
+  .section-qrcode .qrcode img {
+    width: 120px;
+  }
+}
+
+@media (max-height: 710px) {
+  .section-perfil .image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .section-perfil .image img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .section-perfil .name {
+    font-size: 16px;
+    margin: 25px 0;
+  }
+
+  .section-dados {
+    gap: 20px;
+  }
+
+  .section-dados .dados h2 {
+    font-size: 12px;
+  }
+
+  .section-dados .dados p {
+    font-size: 10px;
+  }
+
+  .section-qrcode .nome--conta-bancaria h2 {
+    font-size: 12px;
+  }
+
+  .section-qrcode .qrcode img {
+    width: 100px;
+  }
+}
+
+@media (min-height: 1200px) {
+  .section-perfil .image {
+    width: 190px;
+    height: 190px;
+  }
+
+  .section-perfil .image img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .section-perfil .name {
+    font-size: 25px;
+  }
+
+  .section-dados {
+    margin: 30px 0;
+  }
+}

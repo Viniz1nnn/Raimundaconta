@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="icon" href="assets/image/logo.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/ccn0twBV/imagem-ao-compartilhar.png"
+    />
+    <meta property="og:title" content="Raimunda Veras | Dados Bancários" />
+    <meta
+      property="og:description"
+      content="Dados Bancários, banco do Brasil, agência, conta e chave pix"
+    />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <title>Raimunda Veras | Dados Bancários</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/2b7a15895c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <img src="assets/image/imagem de fundo.PNG" alt="" />
+        <button
+          class="compartilhar"
+          id="shareBtn"
+          aria-label="Compartilhar página"
+        >
+          <i class="fa-solid fa-share-nodes"></i>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="container section-perfil">
+          <div class="image">
+            <img src="assets/image/foto de perfil.JPG" alt="imagem de perfil" />
+          </div>
+          <h1 class="name">Raimunda Veras | Engenharia</h1>
+        </div>
+      </section>
+      <section>
+        <div class="container section-dados">
+          <div class="dados">
+            <div class="dados-bancarios">
+              <h2>
+                <i class="fa-solid fa-building-columns"></i>
+                Dados Bancários
+              </h2>
+              <p>Banco do Brasil</p>
+              <p>Agência: 1637-3</p>
+              <p>Conta Corrente: 87827-8</p>
+            </div>
+          </div>
+
+          <div class="dados">
+            <div class="chave-pix">
+              <h2>
+                <i class="fa-solid fa-key"></i>
+                Chave Pix
+              </h2>
+              <p>(86) 9 9956-2472</p>
+            </div>
+            <button onclick="copiarPix()" class="botao-copiar" id="copy">
+              <i class="fa-solid fa-copy"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container section-qrcode">
+          <div class="nome--conta-bancaria">
+            <h2>Raimunda e s neta</h2>
+          </div>
+          <div class="qrcode">
+            <button id="abrirModal" class="botao-qr">
+              <img src="assets/image/qrcode.jpg" alt="qr code pix" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- indicador que a chave pix foi copiada -->
+
+      <div id="toast" class="toast">Copiado!</div>
+
+      <!-- Modal do Qr Code -->
+
+      <div id="modalQrCode" class="modal">
+        <div class="modal-conteudo">
+          <button class="botao-download" onclick="downloadImagem()">
+            <i class="fa-solid fa-download"></i>
+          </button>
+          <span class="fechar">&times;</span>
+          <h2>Raimunda e s neta</h2>
+          <img
+            src="assets/image/qrcode.jpg"
+            alt="QR Code PIX"
+            id="imagemParaDownload"
+          />
+          <p>Chave PIX: (86) 9 9956-2472</p>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
