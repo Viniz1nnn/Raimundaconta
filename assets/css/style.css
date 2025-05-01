@@ -319,20 +319,12 @@ header {
     gap: 20px;
   }
 
-  .section-dados .dados h2 {
-    font-size: 12px;
-  }
-
-  .section-dados .dados p {
-    font-size: 10px;
-  }
-
   .section-qrcode .nome--conta-bancaria h2 {
     font-size: 12px;
   }
 
   .section-qrcode .qrcode img {
-    width: 100px;
+    width: 110px;
   }
 }
 
